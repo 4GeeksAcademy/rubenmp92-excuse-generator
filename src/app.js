@@ -22,20 +22,25 @@ window.onload = function() {
   function superExcuseGenerator(question) {
     return question[Math.floor(Math.random() * question.length)];
   }
-  let whoExcuse = superExcuseGenerator(who);
-  let actionExcuse = superExcuseGenerator(action);
-  let whatExcuse = superExcuseGenerator(what);
-  let whenExcuse = superExcuseGenerator(when);
-  let excuse =
-    whoExcuse +
-    " " +
-    actionExcuse +
-    " " +
-    whatExcuse +
-    " " +
-    whenExcuse +
-    " " +
-    ".";
+  function generateExcuse() {
+    let whoExcuse = superExcuseGenerator(who);
+    let actionExcuse = superExcuseGenerator(action);
+    let whatExcuse = superExcuseGenerator(what);
+    let whenExcuse = superExcuseGenerator(when);
+    let excuse =
+      whoExcuse +
+      " " +
+      actionExcuse +
+      " " +
+      whatExcuse +
+      " " +
+      whenExcuse +
+      " " +
+      ".";
 
-  document.getElementById("excuse").innerText = excuse;
+    document.getElementById("excuse").innerText = excuse;
+  }
+
+  generateExcuse();
+  document.querySelector("#button").addEventListener("click", generateExcuse);
 };

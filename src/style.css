@@ -2,5 +2,10 @@
 #excuse {
   color: black;
   text-align: center;
-  font-size: 100px;
+  font-size: 50px;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
 }
